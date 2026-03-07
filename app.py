@@ -174,17 +174,6 @@ st.markdown(
         background: var(--amber2) !important;
     }
 
-    /* ── Ghost / secondary button ── */
-    .btn-ghost .stButton > button {
-        background: transparent !important;
-        color: var(--muted) !important;
-        border: 1px solid var(--muted) !important;
-    }
-    .btn-ghost .stButton > button:hover {
-        border-color: var(--amber) !important;
-        color: var(--amber) !important;
-    }
-
     /* ── Divider ── */
     hr { border-color: rgba(255,255,255,0.07) !important; }
 
@@ -352,29 +341,46 @@ st.markdown(
 
 col_score, col_new, col_quit = st.columns([2, 2, 2])
 
+# Style the Quit button via its key so it doesn't need a broken div wrapper
+st.markdown(
+    """
+    <style>
+    div[data-testid="stButton"]:has(button[kind="secondary"]) button,
+    button[data-testid="baseButton-secondary"] {
+        background: transparent !important;
+        color: var(--muted) !important;
+        border: 1px solid var(--muted) !important;
+    }
+    button[data-testid="baseButton-secondary"]:hover {
+        border-color: var(--amber) !important;
+        color: var(--amber) !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 with col_score:
     correct = st.session_state.score_correct
     total = st.session_state.score_total
     st.markdown(
-        f'<div style="padding-top:0.48rem;text-align:center;">'
+        f'<div style="padding-top:0.45rem;text-align:center;">'
         f'<span class="score-pill">Score: {correct} / {total}</span></div>',
         unsafe_allow_html=True,
     )
 
 with col_new:
-    if st.button("▶ New Round", use_container_width=True):
+    if st.button("▶ New Round", use_container_width=True, type="primary"):
         _start_new_round()
         st.rerun()
 
 with col_quit:
-    st.markdown('<div class="btn-ghost">', unsafe_allow_html=True)
-    if st.button("✕ Quit", use_container_width=True):
+    if st.button("✕ Quit", use_container_width=True, type="secondary"):
         st.session_state.current_text = None
         st.session_state.blanks = None
         st.session_state.submitted = False
         st.session_state.error_msg = ""
         st.rerun()
-    st.markdown("</div>", unsafe_allow_html=True)
 
 st.divider()
 
