@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Im Supermarkt",
+    "level": "A2",
+    "text": "Anna geht jeden Morgen in den Supermarkt. Sie kauft frisches Brot, Milch und Gemüse. An der Kasse bezahlt sie mit ihrer Kreditkarte. Der Kassierer ist freundlich und gibt ihr eine Quittung. Auf dem Rückweg trifft sie ihre Nachbarin Maria, die ebenfalls einkaufen möchte. Die beiden Frauen unterhalten sich kurz über das Wetter und die Preise im Laden."
+  },
+  {
+    "id": 2,
+    "title": "Der erste Schultag",
+    "level": "A1",
+    "text": "Max ist aufgeregt. Heute ist sein erster Schultag. Er trägt einen roten Rucksack und neue Schuhe. Seine Mutter bringt ihn zur Schule. Im Klassenzimmer sieht er viele Kinder. Die Lehrerin heißt Frau Müller. Sie lächelt freundlich. Max findet einen Platz neben einem Jungen namens Lukas. Sie werden gute Freunde."
+  },
+  {
+    "id": 3,
+    "title": "Eine Reise nach Berlin",
+    "level": "B1",
+    "text": "Letzten Sommer unternahm ich eine unvergessliche Reise nach Berlin. Die Hauptstadt Deutschlands beeindruckte mich mit ihrer vielfältigen Geschichte und lebendigen Kultur. Ich besuchte das Brandenburger Tor, das Reichstagsgebäude und das Holocaust-Mahnmal. Besonders faszinierend war die East Side Gallery, wo Künstler aus aller Welt die ehemalige Berliner Mauer mit bunten Gemälden geschmückt haben. Abends genoss ich die pulsierende Musikszene in den zahlreichen Clubs und Bars des Stadtteils Mitte."
+  },
+  {
+    "id": 4,
+    "title": "Klimawandel und seine Folgen",
+    "level": "B2",
+    "text": "Der Klimawandel stellt eine der größten Herausforderungen unserer Zeit dar. Wissenschaftler warnen seit Jahrzehnten vor den katastrophalen Folgen einer globalen Erwärmung. Steigende Meeresspiegel bedrohen Küstenregionen weltweit, während extreme Wetterereignisse wie Dürren und Überschwemmungen zunehmen. Besonders vulnerable Länder im globalen Süden leiden bereits unter den Konsequenzen, obwohl sie kaum zur Entstehung des Problems beigetragen haben. Nachhaltige Lösungsansätze erfordern internationale Zusammenarbeit und tiefgreifende Veränderungen in unseren Produktions- und Konsummustern."
+  },
+  {
+    "id": 5,
+    "title": "Die Philosophie der Zeit",
+    "level": "C1",
+    "text": "Das menschliche Zeitempfinden ist ein faszinierendes philosophisches Paradoxon. Während die Physik die Zeit als eine weitere Dimension des Raumes beschreibt, erleben wir sie als unaufhaltsamen Fluss, der stets in eine Richtung strömt. Kant betrachtete die Zeit als eine apriorische Anschauungsform, durch die wir alle Erfahrungen strukturieren. Die Phänomenologie Husserls hingegen betont die Zeitlichkeit des Bewusstseins selbst: Jeder gegenwärtige Moment umfasst das Nachklingen der Vergangenheit und die Vorwegnahme der Zukunft. Diese Verschränkung von Retention und Protention konstituiert das lebendige Bewusstsein."
+  },
+  {
+    "id": 6,
+    "title": "Kaffeehaus-Kultur in Wien",
+    "level": "A2",
+    "text": "Das Wiener Kaffeehaus ist mehr als ein Ort zum Kaffeetrinken. Es ist ein Treffpunkt für Menschen aus allen Schichten. Man kann dort stundenlang sitzen und Zeitung lesen. Der Kellner bringt immer ein Glas Wasser zum Kaffee. Früher trafen sich dort Künstler und Schriftsteller. Heute kommen Touristen aus aller Welt, um die besondere Atmosphäre zu erleben. Ein Stück Apfelstrudel gehört natürlich dazu."
+  }
+]
