@@ -355,8 +355,8 @@ def _start_new_round(allowed_levels: list[str] | None, level_key: str) -> None:
         # Auto-skip: mark as seen and try again (recursive, but bounded by pool size)
         st.session_state.seen_ids.setdefault(level_key, set()).add(text_entry["id"])
         st.session_state.error_msg = (
-            f"Text „{text_entry['title']}" hat zu wenige auswählbare Wörter"
-            "automatisch übersprungen."
+            f"Text '{text_entry['title']}' hat zu wenige auswaehlbare Woerter — "
+            "automatisch uebersprungen."
         )
         # Attempt once more with a fresh pick (don't recurse endlessly)
         text_entry2 = _pick_text(allowed_levels, level_key)
