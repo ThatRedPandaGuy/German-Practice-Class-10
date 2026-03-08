@@ -239,6 +239,10 @@ def build_blanks(
     if len(blanks) < TARGET_BLANKS:
         return None  # could not find enough valid words
 
+    # Sort by position so gap [1] is the first word in the text,
+    # gap [2] is the second, etc. — matching reading order.
+    blanks.sort(key=lambda b: b["position"])
+
     return blanks
 
 

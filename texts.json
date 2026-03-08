@@ -1,54 +1,63 @@
 [
   {
     "id": 1,
+    "chapter": 6,
     "title": "Einladung",
     "level": "A1",
     "text": "Liebe Schülerinnen und Schüler, liebe Lehrerinnen und Lehrer, liebe Eltern! Unsere Schule wählt einen neuen Kantinenleiter. Deshalb wollen wir am 14. 5 und 15.5 jeweils um 13 Uhr ein Testessen machen. Dazu laden wir Schüler, Lehrer und Eltern ein. 12 Personen aus jeder Gruppe können mitmachen, die Teilnehmer bestimmt das Los. Wir wünschen allen viel Glück! Und so funktioniert unser Testessen: Jeder Teilnehmer probiert jedes Gericht, danach füllt sie oder er einen Fragebogen aus. Interessiert? Dann gleich anmelden unter oder einfach anrufen. Anmeldeschluss 10. 5. Guten Appetit!"
   },
   {
     "id": 2,
+    "chapter": 6,
     "title": "Gut Oder Günstig? - 1",
     "level": "A1",
     "text": "Lehrer, Schüler und Eltern probieren in vielen Schulen im Köln Alternativen zum beschriebenen Kantinenangebot und geben Noten von 1 bis 6 für Aussehen, Geschmack und Qualität für die neuen Gerichte. Auf die Frage, wo es denn besser schmeckt, zu Hause oder in der Kantine, sieht Testesser Robin Hormann in der Gesamtschule Rodenkirchen es kurz zu seiner Mutter Sandra. Sie ist auch Testesserin und vom neuen Schulessen positiv überrascht. Genauso gut wie zu Hause, sagt Robin dann, und seine Mutter lacht, er hat total recht!"
   },
   {
     "id": 3,
+    "chapter": 6,
     "title": "Gut Oder Günstig? - 2",
     "level": "A1",
     "text": "Jeder glaubt, dass Kinder und Jugendliche Pommes und Pizza lieben, also eher die fetten, nicht sehr gesunden Gerichte. Aber das stimmt nicht. Auf den Fragebogen am Testessen sieht man, dass gesunde Gerichte wie Karotten oder Kartoffelsuppe den Schülern ebenso gut schmecken wie Pommes oder Nudeln mit Soße. Nur frisch müssen die Zutaten sein, gut gekocht und schön serviert! Unser Essen soll immer besser werden, sagt auch Frau von der Schule. Da helfen uns die ehrlichen Antworten unserer Testesser sehr. Und für gutes Essen zahlen die meisten Eltern gern ein bisschen mehr nach dem Motto: Lieber gut als nur günstig."
   },
   {
     "id": 4,
+    "chapter": 6,
     "title": "Jugendlicher und ihrer Heimatregionen - 1 + 2",
     "level": "A1",
     "text": "Naturfreunde, aufgepasst! Ich bin Melly, und auf dem Foto seht ihr, was ich am liebsten mache: paddeln! Ich komme nämlich aus Waren an der Müritz, in Mecklenburg-Vorpommern. Der Müritz-Nationalpark hat verschiedene Seen, die miteinander verbunden sind, ein Paradies für Paddler. Hier gibt es viele seltene Vögel und Pflanzen zu sehen. Servus Leute! Ich bin der Toni und komme aus Aushau. Das ist ein kleiner Ort in einem bekannten Tal in Österreich, im Zillertal. Kein Wunder also, dass ich den Winter und den Schnee liebe. Mein allerliebstes Hobby ist Snowboardfahren. Das Foto ist echt cool, oder? Wir haben heuer das höchste Gebirge in Mitteleuropa. Viele Touristen kommen, zum Wandern und zum Skifahren hierher."
   },
   {
     "id": 5,
+    "chapter": 6,
     "title": "Jugendlicher und ihrer Heimatregionen - 3 + 4",
     "level": "A1",
     "text": "Meine Heimatstadt heißt Calw und liegt in Baden-Württemberg. Ich bin Sylvie und mag diese Landschaft hier sehr: grüne Hügel und Wiesen, aber auch tiefe, dunkle Wälder. Weil ich die Natur liebe, bin ich auch bei den Pfadfindern. Das Foto hat meine Freundin letztes Jahr auf einem internationalen Pfadfindertreffen gemacht. Das war total spannend. Wir haben gezeltet und über das Thema Europa gesprochen. Moin, ich bin Sven und komme von der Insel Amrum. Das Klima hier an der Küste ist mild, und wir haben wunderschöne, lange Sandstrände. Mein Lieblingshobby ist Kitesurfen. Die Touristen mieten hier Strandkörbe, um sich gegen den Wind zu schützen. Aber ein richtiger Nordfriese braucht das natürlich nicht. Für uns gehört der Wind einfach dazu."
   },
   {
     "id": 6,
+    "chapter": 6,
     "title": "Jugendlicher und ihrer Heimatregionen - 5 + 6",
     "level": "A1",
     "text": "Bist du romantisch? Dann musst du unbedingt mal eine Schiffahrt hier machen. Eine Gegend wie im Märchen, romantische Burgen und spannende Geschichten. Dieser Fluss fasziniert die Menschen seit Jahrhunderten. Er ist sehr lang und verbindet den Norden mit dem Süden. Ach ja, ich heiße übringens Felix und komme aus Bingen, bekannt durch die Lorelyy. Im Sommer mache ich hier gern Mountainbike-Touren mit meinen Freunden. Salü! So begrüßen wir uns hier in der Schweiz. Im August ist mein Traum wahr geworden. Ich habe zum Geburtstag von meinen Eltern einen Paragliding-Flug bekommen. Ich sage euch, das war gigantisch. Die Umgebung von Luzern ist wunderschön. Die Berge und die Wiesen unter dir der traumhafte See. Aber unsere kleine Stadt hat auch viele schöne Sehenswürdigkeiten. Ich bin übringens die Hannah. Kommt mich doch mal besuchen."
   },
   {
     "id": 7,
+    "chapter": 6,
     "title": "E-mail pg 57",
     "level": "A1",
     "text": "Sehr geehrter Herr Klein, mein Name ist Lukas Binder. Ich bin Schüler der Klasse 9B und nehme an der Koch-AG teil. Unsere AG würde am Ende des Schuljahres gern ein Schulessen organisieren. Sind Sie damit einverstanden? Wir könnten uns dann bei der Organisation helfen. Außerdem kann man für so eine Schulessen Geld von der Schule bekommen? Wir freuen uns auf Ihre Antwort. Mit freundlichen Grüßen."
   },
   {
     "id": 8,
+    "chapter": 6,
     "title": "MommyBlau",
     "level": "A1",
     "text": "Hallo, ich habe eine Frage. Wir ziehen um und suchen für unseren Sohn eine Schule im Norden von Köln. Gutes Schulessen ist für uns dabei sehr wichtig. Hat jemand einen Tipp? Hallo Mommie Blau, unsere Tochter Kati wechselt im nächsten Jahr auf die Schule. Deshalb haben wir uns verschiedene Alternativen angesehen. Den besten Eindruck hat auf uns die Wolfgang-Herrendorf-Gesamtschule gemacht. Die Schüler können zwischen vielen verschiedenen Fächern wählen, und sie machen auch tolle Projekte. Das Angebot ist wirklich groß. Wir haben uns auch die Kantine angesehen und waren von der Qualität des Essens überrascht. In dieser Schule kocht man nur mit frischen Zutaten, und das zeigt sich dann auch im Geschmack. Wir haben selten so eine gute, gesunde Suppe gegessen. Die Direktorin hat uns erklärt, dass sie außerdem gute Preis anbieten können, weil sie sehr günstig einkaufen. Auch unserer Tochter hat die Schule sehr gut gefallen, denn sie haben auch tolle AGs."
   },
   {
     "id": 9,
+    "chapter": 6,
     "title": "Freizeitstress",
     "level": "A1",
     "text": "Einfach nur rumhängen, das kann ich gar nicht. Ich finde es total langweilig, nichts zu tun. In meiner Freizeit bin ich gern aktiv, mache Sport und Musik oder treffe mich mit Freunden. Dienstag und Donnerstag trainiere ich Handball, und außerdem spiele ich seit zwei Jahren Gitarre. Das macht Spaß und tut mir gut. Ich glaube auch, dass ich viel mehr lerne, wenn ich aktiv bin. Manchmal mache ich auch kleinere Jobs, um ein bisschen mehr Taschengeld zu haben. Ich kann gar nicht verstehen, warum so viele immer nur chillen wollen. Meiner Meinung nach sollten die Menschen viel aktiver sein, weil das auch gesünder ist."

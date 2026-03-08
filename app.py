@@ -41,7 +41,7 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap');
+    /* Times New Roman is a system font — no import needed */
 
     :root {
         --navy:   #0d1b2a;
@@ -57,7 +57,7 @@ st.markdown(
     html, body, [data-testid="stAppViewContainer"] {
         background-color: var(--navy) !important;
         color: var(--cream) !important;
-        font-family: 'Source Sans 3', sans-serif !important;
+        font-family: 'Times New Roman', Times, serif !important;
         font-weight: 300;
     }
 
@@ -69,7 +69,7 @@ st.markdown(
         padding: 2.4rem 0 1.2rem;
     }
     .lesen-header h1 {
-        font-family: 'Playfair Display', serif;
+        font-family: 'Times New Roman', Times, serif;
         font-size: 2.8rem;
         font-weight: 700;
         color: var(--amber);
@@ -118,7 +118,7 @@ st.markdown(
         border: 1px solid rgba(232,168,56,0.18);
         padding: 1.8rem 2.2rem;
         margin: 1.2rem 0;
-        font-family: 'Playfair Display', serif;
+        font-family: 'Times New Roman', Times, serif;
         font-style: italic;
         font-size: 1.08rem;
         line-height: 1.9;
@@ -166,7 +166,7 @@ st.markdown(
         border: none !important;
         border-radius: 8px !important;
         padding: 0.5rem 1.4rem !important;
-        font-family: 'Source Sans 3', sans-serif !important;
+        font-family: 'Times New Roman', Times, serif !important;
         font-size: 0.95rem !important;
         transition: background 0.2s;
     }
@@ -409,11 +409,11 @@ text_entry: dict = st.session_state.current_text
 blanks: list[dict] = st.session_state.blanks
 submitted: bool = st.session_state.submitted
 
-# Text title + chapter badge
-chapter_num = text_entry.get("id", "—")
+# Text title + chapter badge (uses "chapter" field if set, falls back to "id")
+chapter_num = text_entry.get("chapter", text_entry.get("id", "—"))
 st.markdown(
     f'<div style="margin-bottom:0.4rem;">'
-    f'<span style="font-family:\'Playfair Display\',serif;font-size:1.2rem;'
+    f'<span style="font-family:\'Times New Roman\',Times,serif;font-size:1.2rem;'
     f'font-weight:700;color:var(--amber);">{text_entry["title"]}</span>'
     f'<span class="chapter-badge">Chapter {chapter_num}</span>'
     f"</div>",
