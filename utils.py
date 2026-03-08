@@ -197,15 +197,15 @@ def build_blanks(
     if len(candidates) < TARGET_BLANKS:
         return None  # caller should skip this text
 
-    # Unique candidates by position (word + index in token list)
-    # We use the position of the first occurrence in *tokens* for each candidate.
-    token_positions: dict[str, int] = {}
-    for idx, tok in enumerate(tokens):
-        if tok in candidates and tok not in token_positions:
-            token_positions[tok] = idx
-
-    # Build a pool of (word, position) tuples and shuffle
-    pool = [(w, token_positions[w]) for w in candidates if w in token_positions]
+    # Build pool as (word, token_index) for every candidate token,
+    # preserving each occurrence independently — duplicate words each
+    # get their own position so both can become separate gaps.
+    candidate_set = set(candidates)
+    pool = [
+        (tok, idx)
+        for idx, tok in enumerate(tokens)
+        if tok in candidate_set
+    ]
     random.shuffle(pool)
 
     blanks: list[dict] = []
@@ -257,49 +257,44 @@ def render_text_with_blanks(text: str, blanks: list[dict]) -> list:
       {"type": "text",  "content": str}           — plain text chunk
       {"type": "blank", "blank_index": int}        — placeholder for dropdown i
 
-    The segments are ordered as they appear in the original text.
+    Matching is done by TOKEN POSITION (the blank's recorded index in the token
+    list), not by word string. This means two gaps with the same surface form
+    (e.g. both "mal") are each correctly marked at their own position.
 
     Args:
         text:   Original German text.
-        blanks: List of blank dicts from build_blanks().
+        blanks: List of blank dicts from build_blanks(), sorted by position.
 
     Returns:
         Ordered list of segment dicts.
     """
-    tokens = tokenise(text)
-
-    # Map each blank to its word (we'll replace first occurrence in token order)
-    blank_by_word: dict[str, int] = {}
-    for i, b in enumerate(blanks):
-        if b["word"] not in blank_by_word:
-            blank_by_word[b["word"]] = i
+    # Build a lookup: token_index → blank_index (i.e. gap number 0-based)
+    position_to_blank: dict[int, int] = {
+        b["position"]: i for i, b in enumerate(blanks)
+    }
 
     segments: list[dict] = []
-    used_blank_indices: set[int] = set()
-
-    # We rebuild the text character-by-character using regex spans
     pattern = re.compile(r"[^\W\d_]+", re.UNICODE)
     last_end = 0
+    token_index = 0  # counts every word token we encounter in the text
 
     for match in pattern.finditer(text):
-        token = match.group()
         start, end = match.span()
 
-        # Add any leading punctuation / whitespace as plain text
+        # Emit any leading whitespace / punctuation as plain text
         if start > last_end:
             segments.append({"type": "text", "content": text[last_end:start]})
 
-        blank_idx = blank_by_word.get(token)
-        if blank_idx is not None and blank_idx not in used_blank_indices:
-            # Replace with a blank widget
+        if token_index in position_to_blank:
+            blank_idx = position_to_blank[token_index]
             segments.append({"type": "blank", "blank_index": blank_idx})
-            used_blank_indices.add(blank_idx)
         else:
-            segments.append({"type": "text", "content": token})
+            segments.append({"type": "text", "content": match.group()})
 
+        token_index += 1
         last_end = end
 
-    # Append any trailing punctuation
+    # Trailing punctuation / whitespace
     if last_end < len(text):
         segments.append({"type": "text", "content": text[last_end:]})
 
