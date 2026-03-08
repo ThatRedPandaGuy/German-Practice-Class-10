@@ -20,7 +20,7 @@ from pathlib import Path
 
 OPENTHESAURUS_URL = "https://www.openthesaurus.de/synonyme/search"
 API_TIMEOUT = 6          # seconds before we give up on a single API call
-MIN_SYNONYMS = 2         # minimum synonyms required to keep a candidate word
+MIN_SYNONYMS = 3         # minimum synonyms required to keep a candidate word
 TARGET_BLANKS = 5        # how many blanks we aim to create per round
 MIN_WORD_LENGTH = 3      # ignore very short tokens even after stop-word removal
 
@@ -149,9 +149,17 @@ def fetch_synonyms(word: str) -> list[str]:
     for synset in data.get("synsets", []):
         for term in synset.get("terms", []):
             term_word = term.get("term", "").strip()
-            # Exclude the query word itself (case-insensitive) and empty strings
-            if term_word and term_word.lower() != word.lower():
-                synonyms.add(term_word)
+            if not term_word:
+                continue
+            # Skip if it matches the query word (any casing)
+            if term_word.lower() == word.lower():
+                continue
+            # Skip multi-word phrases, bracketed annotations, and anything
+            # containing punctuation that makes it unsuitable as a gap option
+            # (slashes, parentheses, commas, digits mixed with letters, etc.)
+            if not re.match(r"^[^\W\d_]+$", term_word, re.UNICODE):
+                continue
+            synonyms.add(term_word)
 
     return list(synonyms)
 
@@ -220,8 +228,8 @@ def build_blanks(
         if len(synonyms) < MIN_SYNONYMS:
             continue  # not enough synonyms — skip this word
 
-        # Pick exactly 2 distractors at random
-        chosen = random.sample(synonyms, 2)
+        # Pick exactly 3 distractors at random
+        chosen = random.sample(synonyms, 3)
         options = [word] + chosen
         random.shuffle(options)
 
@@ -229,6 +237,7 @@ def build_blanks(
             "word": word,
             "synonym_1": chosen[0],
             "synonym_2": chosen[1],
+            "synonym_3": chosen[2],
             "options": options,
             "position": position,
         })
